@@ -1,0 +1,51 @@
+// Place all the styles related to the Main controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+	// font-family: 'Source Sans Pro', sans-serif !important;
+}
+.bowlby {
+	font-family: 'Bowlby One SC', cursive;
+}
+.banner {
+	height: 200px;
+	background: image-url('girldj_blur.jpg') no-repeat center center;
+	background-size: cover;
+	color: white;
+	margin-bottom: 20px;
+	border-bottom: 1px #ddd solid;
+}
+#brand {
+	margin:0;
+	padding: 60px;
+	text-shadow: black 0px 2px 1px;
+	font-size: 5em;
+}
+
+.primary-btn {
+	height: 50px;
+	width: 100%;
+	margin: auto auto;
+	border-radius: 100px;
+
+	color: white !important;
+	padding: 13px;
+	font-size: 24px;
+	line-height: 24px;
+	text-decoration: none !important;
+
+	display: block;
+	vertical-align: middle;
+}
+#spotify_login {
+	background: #220F9E;
+}
+#spotify_login:hover {
+	background: #2E16C2;
+}
+#disconnect {
+	background: #BF0500;
+}
+#disconnect:hover {
+	background: #9B0400;
+}

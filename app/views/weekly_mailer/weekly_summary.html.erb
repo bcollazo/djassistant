@@ -1,0 +1,9 @@
+Hi <%= @user.display_name %>,
+
+<p class="lead">Songs you added this week in Spotify where:</p>
+
+<ul>
+<% @songs.each do |song| %>
+	<li><strong><%= song.name %></strong> <%= song.artists %></li>
+<% end %>
+</ul>
