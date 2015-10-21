@@ -7,5 +7,4 @@ namespace :emails do
   		WeeklyMailer.weekly_summary(user, songs).deliver_now
   	end
   end
-
 end
