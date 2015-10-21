@@ -1,9 +1,21 @@
-Hi <%= @user.display_name %>,
+<div style="font-size:1.2em;font-family:sans-serif;">
+	<h3>Hi <%= @user.display_name %>,</h3>
 
-<p class="lead">Songs you added this week in Spotify where:</p>
+	<p>
+	<% if @songs.count > 0 %>
+		Songs you added this week in Spotify where:
+		<ul>
+		<% @songs.each do |song| %>
+			<li style="line-height:1.5em;"><strong><%= song.name %></strong> <%= song.artists %></li>
+		<% end %>
+		</ul>
+	<% else %>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You did not add any songs in Spotify this week!
+	<% end %>
+	</p>
 
-<ul>
-<% @songs.each do |song| %>
-	<li><strong><%= song.name %></strong> <%= song.artists %></li>
-<% end %>
-</ul>
+	<p>- Your DJAssistant</p>
+</div>
+<p style="text-align:center;">
+	<a href="http://djassistant.club/unsubscribe" style="color:#ccc;font-size:10px;">Unsubscribe</a>
+</p>

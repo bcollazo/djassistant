@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   get '/spotify/callback' => 'spotify#callback'
   get '/update' => 'main#update'
-  get '/disconnect' => 'main#disconnect'
+  get '/unsubscribe' => 'main#disconnect'
 end

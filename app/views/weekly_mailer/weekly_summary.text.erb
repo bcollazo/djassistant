@@ -1,7 +1,19 @@
+Hi <%= @user.display_name %>,
+
+
+<% if @songs.count > 0 %>
 Songs you added this week in Spotify where:
 ===========================================
 
 <% @songs.each do |song| %>
-	- <%= song.name %> - <%= song.artists %>
+<%= song.name %> - <%= song.artists %>
 
 <% end %>
+<% else %>
+	You did not add any songs this week. :(
+<% end %>
+
+
+- Your DJAssistant
+
+To unsubscribe go to: http://djassistant.club/unsubscribe
