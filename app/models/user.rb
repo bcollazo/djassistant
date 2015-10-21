@@ -2,10 +2,10 @@ class User < ActiveRecord::Base
 	has_and_belongs_to_many :songs
 
 	def compute_delta
-		# Get Last Song Seen.  If not exists, then first time!
+		delta_songs = []
+		# If not exists, then first time!
 		if not self.last_spotify_sync_date.nil?
 			next_url = 'https://api.spotify.com/v1/me/tracks'
-			delta_songs = []
 			loop do
 				res = SpotifyHelper.spotify_request(self, next_url)
 				data = JSON.parse(res.body)
