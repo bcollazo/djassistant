@@ -22,6 +22,8 @@ class SpotifyController < ApplicationController
 			else
 				flash[:notice] = "Error #{res.status} Authenticating with Spotify: #{res}. #{JSON.parse(res.body)}"
 			end
+			p res
+			flash[:notice] = "Error #{res.status} Authenticating with Spotify: #{JSON.parse(res.body)}"
 			redirect_to root_url
 		end
 	end

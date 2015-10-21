@@ -9,11 +9,7 @@ module SpotifyHelper
 		"http://www.djassistant.club" : "http://localhost:3000") + 
 		"/spotify/callback"
 	@@AUTHORIZATION_URL = %(
-			https://accounts.spotify.com/authorize?
-			client_id=#{@@CLIENT_ID}
-			&response_type=code
-			&redirect_uri=#{@@REDIRECT_URI}
-			&scope=playlist-read-private user-read-email user-library-read
+			https://accounts.spotify.com/authorize?client_id=#{@@CLIENT_ID}&response_type=code&redirect_uri=#{@@REDIRECT_URI}&scope=playlist-read-private user-read-email user-library-read
 		)
 
 	def self.client_id
