@@ -6,7 +6,7 @@ module SpotifyHelper
 	@@CLIENT_ID = ENV['SPOTIFY_CLIENT_ID']
 	@@CLIENT_SECRET = ENV['SPOTIFY_CLIENT_SECRET']
 	@@REDIRECT_URI = (Rails.env.production? ? 
-		"http://djassistant.club" : "http://localhost:3000") + 
+		"http://www.djassistant.club" : "http://localhost:3000") + 
 		"/spotify/callback"
 	@@AUTHORIZATION_URL = %(
 			https://accounts.spotify.com/authorize?
