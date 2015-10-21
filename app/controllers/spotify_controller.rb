@@ -20,10 +20,8 @@ class SpotifyController < ApplicationController
 				user.save
 				session[:spotify_id] = user.spotify_id
 			else
-				flash[:notice] = "Error #{res.status} Authenticating with Spotify: #{res}. #{JSON.parse(res.body)}"
+				flash[:notice] = "Error Authenticating with Spotify."
 			end
-			p res
-			flash[:notice] = "Error #{res.status} Authenticating with Spotify: #{JSON.parse(res.body)}"
 			redirect_to root_url
 		end
 	end
