@@ -1,25 +1,30 @@
 // Place all the styles related to the Main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body {
-	// font-family: 'Source Sans Pro', sans-serif !important;
+html, body {
+	font-family: 'Roboto', sans-serif !important;
+	min-height: 100%;
+	height: 100%;
 }
 .bowlby {
 	font-family: 'Bowlby One SC', cursive;
 }
-.banner {
-	height: 200px;
+.background {
+	height: 100%;
 	background: image-url('girldj_blur.jpg') no-repeat center center;
 	background-size: cover;
 	color: white;
-	margin-bottom: 20px;
 	border-bottom: 1px #ddd solid;
 }
 #brand {
-	margin:0;
-	padding: 60px;
-	text-shadow: black 0px 2px 1px;
+	margin: 0;
+	padding: 60px 20px 20px 20px;
+	text-shadow: black 0px 2px 8px;
 	font-size: 5em;
+}
+.mask {
+	background: rgba(0, 0, 0, 0.6);
+	height: 100%;
 }
 
 .primary-btn {
@@ -27,6 +32,7 @@ body {
 	width: 100%;
 	margin: auto auto;
 	border-radius: 100px;
+	border: 1px solid #ddd;
 
 	color: white !important;
 	padding: 13px;
