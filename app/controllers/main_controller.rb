@@ -14,4 +14,7 @@ class MainController < ApplicationController
 		session[:spotify_id] = nil
 		redirect_to root_url
 	end
+
+	def contact
+	end
 end

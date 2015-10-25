@@ -9,28 +9,47 @@ html, body {
 .bowlby {
 	font-family: 'Bowlby One SC', cursive;
 }
-.background {
+.page-wrap {
 	height: 100%;
 	background: image-url('girldj_blur.jpg') no-repeat center center;
 	background-size: cover;
 	color: white;
 	border-bottom: 1px #ddd solid;
+	margin-bottom: -30px; 
 }
+.footer {
+	height: 30px;
+}
+.footer ul {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+    	display: inline;
+
+    	a {
+    		color: #999;
+    	}
+    }
+}
+
+.mask {
+	background: rgba(0, 0, 0, 0.6);
+	min-height: 100% !important;
+}
+
 #brand {
 	margin: 0;
 	padding: 60px 20px 20px 20px;
 	text-shadow: black 0px 2px 8px;
 	font-size: 5em;
 }
-.mask {
-	background: rgba(0, 0, 0, 0.6);
-	height: 100%;
-}
 
 .primary-btn {
 	height: 50px;
 	width: 100%;
-	margin: auto auto;
+	margin: 20px auto;
 	border-radius: 100px;
 	border: 1px solid #ddd;
 
@@ -54,4 +73,16 @@ html, body {
 }
 #disconnect:hover {
 	background: #9B0400;
+}
+
+
+h1#contact {
+	margin: 0;
+	padding: 60px;
+}
+
+.foxyform-wrapper {
+	display: block;
+	width: 350px;
+	margin: auto auto;
 }

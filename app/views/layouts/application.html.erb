@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Djassistant</title>
+  <title>DJ Assistant</title>
+  <%= favicon_link_tag 'dj.ico' %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <link href='https://fonts.googleapis.com/css?family=Roboto|Bowlby+One+SC' rel='stylesheet' type='text/css'>
@@ -23,7 +24,19 @@
     <div class="flash" id="<%= k %>"><%= v %></div>
 <% end %>
 
-<%= yield %>
+<div class="page-wrap">
+  <div class="mask">
+
+    <%= yield %>
+
+  </div>
+</div>
+<div class="footer">
+  <ul class="text-center">
+    <li><a href="/">Home</a></li>
+    <li><a href="/contact">Contact Us</a></li>
+  </ul>
+</div>
 
 </body>
 </html>
