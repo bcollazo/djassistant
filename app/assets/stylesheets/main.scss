@@ -1,26 +1,46 @@
 // Place all the styles related to the Main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+* {
+	margin: 0;
+}
 html, body {
 	font-family: 'Roboto', sans-serif !important;
-	min-height: 100% !important;
+	min-height: 100%;
 	height: 100%;
 }
-@media only screen and (max-height: 480px), only screen and (max-device-height: 480px) {
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
 	html, body {
 		height: auto !important;
 	}
+	.step p {
+		font-size: 24px !important;
+		height: 40px !important;
+		line-height: 40px !important;
+	}
+	.step span {
+		width: 40px !important;
+		margin-right: 10px !important;
+	}
+	.primary-btn {
+		font-size: 20px !important;
+	}
+
 }
 .bowlby {
 	font-family: 'Bowlby One SC', cursive;
 }
+// ===== FOOTER (https://css-tricks.com/snippets/css/sticky-footer/)
 .page-wrap {
 	height: 100%;
 	background: image-url('girldj_blur.jpg') no-repeat center center;
 	background-size: cover;
 	color: white;
-	border-bottom: 1px #ddd solid;
-	margin-bottom: -30px; 
+	margin-bottom: -30px !important;
+}
+.page-wrap:after {
+	content: "";
+	display: block;
 }
 .footer {
 	height: 30px;
@@ -40,12 +60,13 @@ html, body {
 }
 .mask {
 	background: rgba(0, 0, 0, 0.6);
-	min-height: 100%;
+	height: 100%;
 }
 .last-row {
 	margin-bottom: 30px;
 }
 
+// ===== LANDING PAGE
 #brand {
 	margin: 0;
 	padding: 60px 20px 20px 20px;
@@ -53,22 +74,41 @@ html, body {
 	font-size: 3.5em;
 }
 
+.step:nth-child(2) {
+	margin-top: 0;
+}
 .step {
-	font-size: 1.9em;
-	height: 60px;
-	line-height: 60px;
+	margin-top: 40px;
+}
+.step p {
+	font-size: 28px;
+	height: 50px;
+	line-height: 50px;
 }
 .step span {
 	text-align: center;
 	display: inline-block;
 	background: #222;
 	border-radius: 50%;
-	font-size: 1.5em;
-	width: 60px;
-	float: left;
+	font-size: 28px;
+	width: 50px;
+	// float: left;
+	margin-right: 20px;
+}
+.step.disabled span {
+	background: #777;
+	color: white;
+}
+.step .images img {
+	height: 120px;
+	width: 120px;
+}
+.step .images img:first-child {
 	margin-right: 20px;
 }
 
+
+// ===== BUTTONS
 .primary-btn {
 	position:relative;
 	vertical-align: top;
@@ -98,28 +138,51 @@ html, body {
 	-webkit-box-shadow: none;
 	box-shadow: none;
 }
-#spotify_login {
+.not-connected:hover {
+	background: #777;
+}
+.blue {
 	background: #0A368D;
 }
-#spotify_login:hover {
+.blue:hover {
 	background: #062B73;
 }
-#spotify_long:active {
+.blue:active {
 	background: #031F55;
 }
-#disconnect {
+.green {
+	background: #1FB100;
+}
+.green:hover {
+	background: #199000;
+}
+.green:active {
+	background: #136B00;
+}
+.red {
 	background: #BF0500;
 }
-#disconnect:hover {
+.red:hover {
 	background: #9B0400;
 }
+.red:active {
+	background: #9B0400;
+}
+.orange {
+	background: #D45C00;
+}
+.orange:hover {
+	background: #AC4B00;
+}
+.orange:active {
+	background: #803800;
+}
 
-
+// ==== CONTACT US
 h1#contact {
 	margin: 0;
 	padding: 60px;
 }
-
 .foxyform-wrapper {
 	display: block;
 	width: 350px;
