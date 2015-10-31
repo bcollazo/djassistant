@@ -3,8 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 html, body {
 	font-family: 'Roboto', sans-serif !important;
-	min-height: 100%;
+	min-height: 100% !important;
 	height: 100%;
+}
+@media only screen and (max-height: 480px), only screen and (max-device-height: 480px) {
+	html, body {
+		height: auto !important;
+	}
 }
 .bowlby {
 	font-family: 'Bowlby One SC', cursive;
@@ -37,6 +42,9 @@ html, body {
 	background: rgba(0, 0, 0, 0.6);
 	min-height: 100%;
 }
+.last-row {
+	margin-bottom: 30px;
+}
 
 #brand {
 	margin: 0;
@@ -45,12 +53,34 @@ html, body {
 	font-size: 3.5em;
 }
 
+.step {
+	font-size: 1.9em;
+	height: 60px;
+	line-height: 60px;
+}
+.step span {
+	text-align: center;
+	display: inline-block;
+	background: #222;
+	border-radius: 50%;
+	font-size: 1.5em;
+	width: 60px;
+	float: left;
+	margin-right: 20px;
+}
+
 .primary-btn {
-	height: 50px;
+	position:relative;
+	vertical-align: top;
+	top: 0px;
 	width: 100%;
+	height: 60px;
 	margin: 20px auto;
 	border-radius: 100px;
-	border: 1px solid #ddd;
+	text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+	border-bottom: 2px solid #222;
+	-webkit-box-shadow: inset 0 -2px #222;
+	box-shadow: inset 0 -2px #222;
 
 	color: white !important;
 	padding: 13px;
@@ -60,12 +90,22 @@ html, body {
 
 	display: block;
 	vertical-align: middle;
+	cursor: pointer;
+}
+.primary-btn:active {
+	top: 1px;
+	outline: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
 }
 #spotify_login {
-	background: #220F9E;
+	background: #0A368D;
 }
 #spotify_login:hover {
-	background: #2E16C2;
+	background: #062B73;
+}
+#spotify_long:active {
+	background: #031F55;
 }
 #disconnect {
 	background: #BF0500;
