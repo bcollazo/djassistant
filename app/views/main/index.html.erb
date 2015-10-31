@@ -1,17 +1,27 @@
-<h1 id="brand" class="text-center bowlby">Your free Dj Assistant</h1>
 <div class="container">
 	<div class="row">
-		<p class="text-center lead">
-			Get emails with the songs you save/like in Spotify and Soundcloud.
-		</p>
-		<div class="col-xs-offset-2 col-xs-8 col-md-offset-4 col-md-4">
+		<h1 id="brand" class="text-center bowlby">Your free Dj Assistant</h1>
+		<div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-2 col-md-8">
+			<p class="text-center lead">
+				Get emails with the songs you save/like in Spotify and Soundcloud.
+			</p>
+			<% if not @current_user.nil? %>
+			<p class="text-center lead">
+				Hi <strong><%= @current_user.display_name %></strong>! You have now connected DJ Assistant with your Spotify account.
+			</p>
+			<% end %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-4 col-md-4">
 			<% if @current_user.nil? %>
 				<a id="spotify_login" class="text-center primary-btn" href="<%= @request_spotify_authorization_url %>">
 					Sign Up
 				</a>
 			<% else %>
-				<p class="text-center lead">Hi <strong><%= @current_user.display_name %></strong>! You have now connected DJ Assistant with your Spotify account.</p>
-				<a id="disconnect" class="text-center primary-btn" href="/unsubscribe">Disconnect</a>
+				<a id="disconnect" class="text-center primary-btn" href="/unsubscribe">
+					Disconnect
+				</a>
 			<% end %>
 		</div>
 	</div>
