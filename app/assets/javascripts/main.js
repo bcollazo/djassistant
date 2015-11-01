@@ -4,16 +4,20 @@ $(document).ready(function() {
 		$(".form-group").removeClass("has-error");
 	});
 	$("#submit_btn").click(function() {
-		var isValid = false;
+		var email = $(".form-group input").val();
+		var isValid = email != "";
 
 		if (isValid) {
-			$.get("/submit", {email: email}, function(data) {
-				// success
-			});
+			$.post(
+				'/submit',
+				{email: email},
+				function() {
+					window.location.reload();
+				}
+			);
 		} else {
 			$(".form-group .help-block").show();
 			$(".form-group").addClass("has-error");
-			 has-error
 		}
 	});
 })

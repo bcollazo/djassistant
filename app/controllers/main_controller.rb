@@ -10,7 +10,9 @@ class MainController < ApplicationController
 	end
 
 	def submit
-		# set email.
+		@current_user.email = params[:email]
+		@current_user.save
+		render :nothing => true
 	end
 
 	def disconnect

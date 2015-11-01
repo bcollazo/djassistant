@@ -1,6 +1,6 @@
 <div class="container">
 	<h1 id="brand" class="text-center bowlby">Your free Dj Assistant</h1>
-	<% if @current_user.nil? or not @current_user.email? %>
+	<% if @current_user.nil? || !@current_user.email? %>
 	<div class="row step">
 		<p class="text-center">
 			<span class="circle">1</span>Connect your accounts
