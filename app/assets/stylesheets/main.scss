@@ -15,17 +15,15 @@ html, body {
 	}
 	.step p {
 		font-size: 24px !important;
-		height: 40px !important;
 		line-height: 40px !important;
 	}
-	.step span {
+	.step span.circle {
 		width: 40px !important;
-		margin-right: 10px !important;
+		height: 40px !important;
 	}
 	.primary-btn {
 		font-size: 20px !important;
 	}
-
 }
 .bowlby {
 	font-family: 'Bowlby One SC', cursive;
@@ -63,7 +61,7 @@ html, body {
 	height: 100%;
 }
 .last-row {
-	margin-bottom: 30px;
+	margin-bottom: 40px;
 }
 
 // ===== LANDING PAGE
@@ -82,22 +80,18 @@ html, body {
 }
 .step p {
 	font-size: 28px;
-	height: 50px;
 	line-height: 50px;
 }
-.step span {
+.step span.circle {
 	text-align: center;
 	display: inline-block;
 	background: #222;
 	border-radius: 50%;
 	font-size: 28px;
+	height: 50px;
 	width: 50px;
 	// float: left;
-	margin-right: 20px;
-}
-.step.disabled span {
-	background: #777;
-	color: white;
+	margin-right: 10px;
 }
 .step .images img {
 	height: 120px;

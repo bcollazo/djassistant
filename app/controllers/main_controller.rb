@@ -9,6 +9,10 @@ class MainController < ApplicationController
 		@request_spotify_authorization_url = SpotifyHelper.authorization_url
 	end
 
+	def submit
+		# set email.
+	end
+
 	def disconnect
 		@current_user.delete
 		session[:spotify_id] = nil

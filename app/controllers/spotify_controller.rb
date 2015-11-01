@@ -14,7 +14,7 @@ class SpotifyController < ApplicationController
 				profile_data = JSON.parse(profile.body)
 				
 				user = User.find_or_create_by(:display_name => profile_data['display_name'],
-					:email => profile_data['email'], :spotify_id => profile_data['id'])
+					:spotify_id => profile_data['id'])
 				user.access_token = res_data['access_token']
 				user.refresh_token = res_data['refresh_token']
 				user.save

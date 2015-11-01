@@ -1,6 +1,10 @@
 class User < ActiveRecord::Base
 	has_and_belongs_to_many :songs
 
+	def spotify_connected
+		return spotify_id.nil?
+	end
+
 	def compute_delta
 		delta_songs = []
 		# If not exists, then first time!
