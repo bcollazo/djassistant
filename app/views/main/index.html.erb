@@ -3,7 +3,7 @@
 	<% if @current_user.nil? || !@current_user.email? %>
 	<div class="row step">
 		<p class="text-center">
-			<span class="circle">1</span>Connect your accounts
+			<strong class="step-span">Step 1:</strong> Connect your accounts
 		</p>
 		<div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-4 col-md-4">
 			<% if not @current_user.nil? and @current_user.spotify_connected %>
@@ -22,26 +22,28 @@
 	</div>
 	<div class="row step">
 		<p class="text-center">
-			<span class="circle">2</span>Enter email
+			<strong class="step-span">Step 2:</strong> Enter email
 		</p>
 		<div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-4 col-md-4">
 			<div class="form-group form-group-lg">
 				<input type="email" name="email" class="form-control" placeholder="Email" aria-describedby="help_block" />
 				<span id="help_block" class="help-block" style="display:none;"><strong>Please enter an email</strong></span>
-				<a id="submit_btn" class="text-center primary-btn blue">
-					Sign Up
-				</a>
 			</div>
 		</div>
 	</div>
 	<div class="row step last-row">		
 		<p class="text-center">
-			<span class="circle">3</span>Receive a weekly list of the songs you save or like
+			<strong class="step-span">Step 3:</strong> Receive a weekly list of the songs you save or like
 		</p>
 		<div class="text-center images">
 			<%= image_tag("spsave.png", :class => "img-circle img-thumbnail") %>
 			<%= image_tag("sclike.png", :class => "img-circle img-thumbnail") %>
 		</div>
+		<div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-4 col-md-4">
+		<a id="submit_btn" class="text-center primary-btn blue">
+			Sign Up
+		</a>
+	</div>
 	</div>
 	<% else %>
 	<div class="row last-row">

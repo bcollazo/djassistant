@@ -9,7 +9,8 @@ html, body {
 	min-height: 100%;
 	height: 100%;
 }
-@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px),
+	only screen and (max-height: 800px) {
 	html, body {
 		height: auto !important;
 	}
@@ -24,6 +25,16 @@ html, body {
 	.primary-btn {
 		font-size: 20px !important;
 	}
+
+	.last-row {
+		margin-bottom: 60px;
+	}
+	.page-wrap {
+		margin-bottom: -50px !important;
+	}
+	.footer {
+		height: 50px;
+	}
 }
 .bowlby {
 	font-family: 'Bowlby One SC', cursive;
@@ -34,7 +45,7 @@ html, body {
 	background: image-url('girldj_blur.jpg') no-repeat center center;
 	background-size: cover;
 	color: white;
-	margin-bottom: -30px !important;
+	margin-bottom: -30px;
 }
 .page-wrap:after {
 	content: "";
@@ -99,6 +110,10 @@ html, body {
 }
 .step .images img:first-child {
 	margin-right: 20px;
+}
+.step-span {
+	font-size: 1.2em;
+	margin-right: 6px;
 }
 
 
